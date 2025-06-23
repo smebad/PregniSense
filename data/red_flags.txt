@@ -1,0 +1,6 @@
+# Red Flag Symptom Combinations
+Severe headache + vision changes + swelling → Preeclampsia   | Risk Level: High
+Bleeding + sharp abdominal pain + low BP → Ectopic Pregnancy | Risk Level: High
+Fever + vaginal discharge + abdominal tenderness → Chorioamnionitis (Infection) | Risk Level: High 
+No fetal movement after 28 weeks → Fetal demise or distress | Risk Level: High
+Contractions < 37 weeks + cervical changes → Preterm labor | Risk Level: Medium–High
