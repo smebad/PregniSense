@@ -69,7 +69,8 @@ if st.button("Assess Risk") and user_inputs:
     st.subheader(f"🩺 Risk Level: {risk_level}")
     st.info(advice)
 
-    st.markdown("### 🔍 AI-Powered Medical Insight:")
-    st.write(response.response)
+    # AI insight tucked away in an expander box
+    with st.expander("Show AI-Powered Medical Insight"):
+        st.write(response.response)
 
     st.caption("📌 This tool is for educational purposes. Please consult your doctor for medical decisions.")
