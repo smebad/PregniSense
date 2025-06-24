@@ -1,9 +1,23 @@
 # This module classifies the risk level of pregnancy symptoms and provides recommendations.
 def classify_risk(symptoms):
+    """
+    Classify pregnancy symptom risk according to the PDF's Risk Output Labels:
+      - Low: Normal fatigue, light nausea
+      - Medium: Spotting, mild hypertension
+      - High: Bleeding, pain, high BP, infection
+    """
     text = " ".join(symptoms).lower()
-    if "heavy bleeding" in text or "severe pain" in text or "no fetal movement" in text:
+
+    # HIGH risk keywords
+    high_keywords = ["bleeding", "pain", "high bp", "hypertension", "infection"]
+    if any(kw in text for kw in high_keywords):
         return "High", "Immediate visit to ER or OB emergency care."
-    elif "spotting" in text or "persistent vomiting" in text or "mild hypertension" in text:
+
+    # MEDIUM risk keywords
+    medium_keywords = ["spotting", "mild hypertension"]
+    if any(kw in text for kw in medium_keywords):
         return "Medium", "Contact your doctor within 24 hours."
-    else:
-        return "Low", "Monitor at home and follow routine prenatal care."
+
+    # LOW risk — everything else
+    return "Low", "Self-monitor and follow routine prenatal care."
+
