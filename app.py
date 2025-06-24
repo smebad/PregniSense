@@ -5,6 +5,7 @@ from llama_index.core import StorageContext, load_index_from_storage, Settings
 from llama_index.llms.google_genai import GoogleGenAI
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from classify import classify_risk
+from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
 
 # Load key from .env (optional)
 load_dotenv()
@@ -32,8 +33,17 @@ Settings.llm = llm
 Settings.embed_model = embed_model
 
 # Load the vector index
-storage_context = StorageContext.from_defaults(persist_dir="storage")
-index = load_index_from_storage(storage_context)
+persist_dir = "storage"
+
+if not os.path.exists(persist_dir):
+    # Rebuild index on Streamlit Cloud or fresh environment
+    docs = SimpleDirectoryReader("data").load_data()
+    index = VectorStoreIndex.from_documents(docs)
+    index.storage_context.persist(persist_dir=persist_dir)
+else:
+    storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
+    index = load_index_from_storage(storage_context)
+    
 query_engine = index.as_query_engine()
 
 # Streamlit UI
