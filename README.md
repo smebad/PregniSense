@@ -45,15 +45,13 @@ Pregnant women often experience a wide range of symptoms that may be normal or i
 
 ---
 
-## 📸 Screenshots
+### 📸 Screenshots
 
-### Before Risk Assessment
+**Before Chat Starts**
+![Before Chat](before_chat.png)
 
-![Before](assets/before_assess_risk.png)
-
-### After Risk Assessment
-
-![After](assets/after_assess_risk.png)
+**After Risk Evaluation**
+![After Chat](after_chat.png)
 
 ---
 
