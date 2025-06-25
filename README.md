@@ -48,10 +48,10 @@ Pregnant women often experience a wide range of symptoms that may be normal or i
 ### 📸 Screenshots
 
 **Before Chat Starts**
-![Before Chat](before_chat.png)
+![Before Chat](assets/before_chat.png)
 
 **After Risk Evaluation**
-![After Chat](after_chat.png)
+![After Chat](assets/after_chat.png)
 
 ---
 
