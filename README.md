@@ -35,10 +35,11 @@ Pregnant women often experience a wide range of symptoms that may be normal or i
 
 ## 📋 Features
 
-* 5-question proactive symptom form
+* Conversational chat interface (like ChatGPT)
+* Step-by-step symptom collection
 * Real-time risk classification: Low / Medium / High
-* LLM-based retrieval of relevant pregnancy health data
-* Expandable AI explanation box
+* Gemini-powered AI medical insight with knowledge base (RAG)
+* Expandable AI explanation box for clarity
 * Gemini API key support via sidebar input
 * Auto-indexing if no prebuilt vector index is found
 
@@ -112,8 +113,8 @@ PregniSense/
 
 1. Loads medical knowledge from `data/*.txt`
 2. Builds vector index using LlamaIndex + HuggingFace embeddings
-3. User answers symptom questions
-4. App classifies risk using simple logic
+3. User interacts with the assistant in a question-answer chat flow  
+4. App classifies risk using logic-based rules
 5. Passes full input to Gemini RAG engine for AI insight
 
 ---
